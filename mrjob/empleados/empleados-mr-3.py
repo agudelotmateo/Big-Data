@@ -1,5 +1,6 @@
 from mrjob.job import MRJob
 
+
 class MRNumeroDeSectoresPorEmpleado(MRJob):
 
     def mapper(self, _, line):
@@ -11,6 +12,7 @@ class MRNumeroDeSectoresPorEmpleado(MRJob):
         for v in values:
             s.add(v)
         yield key, len(s)
+
 
 if __name__ == '__main__':
     MRNumeroDeSectoresPorEmpleado.run()

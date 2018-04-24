@@ -1,6 +1,7 @@
 from mrjob.job import MRJob
 from mrjob.step import MRStep
 
+
 class MRAccionesSiempreSubiendoOEstables(MRJob):
 
     def mapper(self, _, line):
@@ -17,6 +18,7 @@ class MRAccionesSiempreSubiendoOEstables(MRJob):
             last = v
         if valid:
             yield None, key
+
 
 if __name__ == '__main__':
     MRAccionesSiempreSubiendoOEstables.run()

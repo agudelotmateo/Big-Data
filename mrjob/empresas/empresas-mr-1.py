@@ -1,5 +1,6 @@
 from mrjob.job import MRJob
 
+
 class MRDiasMenorYMayorValorPorAccion(MRJob):
 
     def mapper(self, _, line):
@@ -19,6 +20,7 @@ class MRDiasMenorYMayorValorPorAccion(MRJob):
                 max_value = v[0]
                 max_date = v[1]
         yield key, (min_date, max_date)
+
 
 if __name__ == '__main__':
     MRDiasMenorYMayorValorPorAccion.run()

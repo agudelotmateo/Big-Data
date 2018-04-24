@@ -47,5 +47,6 @@ class MRDiaNegro(MRJob):
                 worst_date = v[0]
         yield None, worst_date
 
+
 if __name__ == '__main__':
     MRDiaNegro.run()

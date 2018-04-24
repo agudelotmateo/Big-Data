@@ -1,5 +1,6 @@
 from mrjob.job import MRJob
 
+
 class MRSalarioPromedioPorSector(MRJob):
 
     def mapper(self, _, line):
@@ -13,6 +14,7 @@ class MRSalarioPromedioPorSector(MRJob):
             accum += v
             length += 1
         yield key, accum/length
+
 
 if __name__ == '__main__':
     MRSalarioPromedioPorSector.run()
